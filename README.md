@@ -2,7 +2,7 @@
 ロボットシステム学課題１
 
 ## gcdlcmプログラム
-![test](https://github.com/HAR6910/robosys2025/actions/workflows/test.yml/badge.svg)(https://github.com/HAR6910/robosys2025/actions/workflows/test.yml)
+[![test](https://github.com/HAR6910/robosys2025/actions/workflows/test.yml/badge.svg)](https://github.com/HAR6910/robosys2025/actions/workflows/test.yml)
 
 - 複数の整数を入力すると左から最大公約数、最小公倍数の順で出力します
 
