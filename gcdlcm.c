@@ -29,3 +29,9 @@ def main():
      for x in numbers[1:]:
          g = math.gcd(g, x)
 	 l = l * x // math.gcd(l, x)
+ 
+     print(f"{g} {l}")
+     sys.exit(0)
+
+if __name__ == "__main__":
+    main()
