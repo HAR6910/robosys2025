@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+long long gcd(longlong a, longlong b) {
+   while (b != 0) {
+     long long t = b;
+     b = a % b;
+     a = t;
+   }
+   return a;
+}
+
