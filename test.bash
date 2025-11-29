@@ -2,6 +2,7 @@
 #SPDX-FileCopyrightText: 2025 Sho Harukawa
 #SPDX-License-Identifier: BSD-3-Clause
 
+gcc -o gcdlcm gcdlcm.c || exit 1
 ng () {
 	echo ${1}行目が違うよ
         res=1
