@@ -26,3 +26,6 @@ def main():
      g = numbers[0]
      l = numbers[0]
 
+     for x in numbers[1:]:
+         g = math.gcd(g, x)
+	 l = l * x // math.gcd(l, x)
