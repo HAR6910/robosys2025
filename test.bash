@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/bin/bash -xv
 #SPDX-FileCopyrightText: 2025 Sho Harukawa
 #SPDX-License-Identifier: BSD-3-Clause
 
@@ -17,11 +17,11 @@ out=$(echo 5 | ./gcdlcm)
 
 out=$(echo あ| ./gcdlcm)
 [ "$?" = 1 ]      || ng "$LINENO"
-[ "${out}" = "" ] || ng "$LINEMO"
-
+[ "${out}" = "" ] || ng "$LINENO"
+                       
 out=$(echo | ./gcdlcm)
 [ "$?" = 1 ]      || ng "$LINENO"
-[ "${out}" = "" ] || ng "$LINEMO"
+[ "${out}" = "" ] || ng "$LINENO"
 
 [ "${res}" = 0 ] && echo OK
 exit $res
