@@ -1,4 +1,6 @@
-#!/bin/bash -xv
+#!/user/bin/python3
+#SPDX-FileCopyrightText: 2025 Sho Harukawa
+#SPDX-License-Identifier: BSD-3-Clause
 
 ng () {
 	echo ${1}行目が違うよ
@@ -7,15 +9,17 @@ ng () {
 
 res=0
 
-out=$(seq 5 | ./plus)
-[ "${out}" = 15 ] || ng "$LINENO"
+out=$(printf "12\n18\n24\n" | ./gcdlcm)
+[ "${out}" = "6 72" ] || ng "$LINENO"
 
+out=$(echo 5 | ./gcdlcm)
+[ "${out}" = "5 5" ] || ng "$LINENO"
 
-out=$(echo あ| ./plus)
+out=$(echo あ| ./gcdlcm)
 [ "$?" = 1 ]      || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINEMO"
 
-out=$(echo | ./plus)
+out=$(echo | ./gcdlcm)
 [ "$?" = 1 ]      || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINEMO"
 
