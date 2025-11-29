@@ -1,51 +1,28 @@
-#include <stdio.h>
+//SPDX-FileCopyrightText: 2025 Sho Harukawa
+//SPDX-License-Identifier: BSD-3-Clause
 
-long long gcd(long long a, long long b) {
-   while (b != 0) {
-     long long t = b;
-     b = a % b;
-     a = t;
-   }
-   return a;
-}
+import sys
+import math
 
-long long lcm(long long a, long long b) {
-   return a / gcd(a, b) * b;
-}
+def main():
+    number = []
 
-int main(void) {
-   long long x;
-   long long g = 0;
-   long long l = 0;
-   int first = 1;
+    for line in sys.stdin:
+        line = line.strip()
 
-   while (1) {
-       int ret = scanf("%lld", &x);
+	if line == "":
+	    continue
 
-       if (ret == EOF) {
-	   break;
-       }
+	try:
+	    x = int(line)
+	except ValueError
+	    sys.exit(1)
 
-       if (ret == 0) {
-	   return 1;
-       }
+	numbers.append(x)
 
-
-       if (first) {
-         g = x;
-         l = x;
-         first = 0;
-       } else {
-         g = gcd(g, x);
-         l = lcm(l, x);
-       }
-   }
- 
-   if (first) {
-       return 1;
-   }
-
-   printf("%lld %lld\n", g, l);
-   return 0;
-}
+     if len(numbers) == 0:
+         sys.exit(1)
+    
+     g = numbers[0]
+     l = numbers[0]
 
