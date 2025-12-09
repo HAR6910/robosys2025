@@ -11,35 +11,35 @@
 ```
 $ git clone https://github.com/HAR6910/robosys2025.git
 $ cd robosys2025
-$ chmod +x gcdlcm.py
+$ chmod +x gcdlcm
 ```
 
 ## 実行例
+以下の記述によって最大公約数、最小公倍数の順で出力します
 ```
-$ printf "12\n18\n24\n" | ./gcdlcm.py
+$ printf "12\n18\n24\n" | ./gcdlcm
 6 72
 ```
-最大公約数、最小公倍数の順で出力します
 
+以下の記述は数値が一つのみなので、そのまま数値を両方とも返します
 ```
-$ printf "12" | ./gcdlcm.py
+$ printf "12" | ./gcdlcm
 12 12
 ```
-数値が一つのみなので、そのまま数値を返します
 
+以下の記述をしても何も返しません
 ```
-$ printf "12\n18\nあ\n" | ./gcdlcm.py
+$ printf "12\n18\nあ\n" | ./gcdlcm
 ```
-入力しても何も返しません
 
+以下の記述をしても何も返しません
 ```
-$ printf "あ" | ./gcdlcm.py
+$ printf "あ" | ./gcdlcm
 ```
-入力しても何も返しません
 
 ## 必要なソフトウェア
 - Python
-- テスト済みバージョン：3.7~3.13  
+  - テスト済みバージョン：3.7~3.13  
 
 ## テスト環境
 - Ubuntu 22.04 LTS
