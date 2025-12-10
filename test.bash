@@ -1,6 +1,6 @@
 #!/bin/bash -xv
-#SPDX-FileCopyrightText: 2025 Sho Harukawa
-#SPDX-License-Identifier: BSD-3-Clause
+# SPDX-FileCopyrightText: 2025 Sho Harukawa
+# SPDX-License-Identifier: BSD-3-Clause
 
 chmod +x gcdlcm || exit 1
 
